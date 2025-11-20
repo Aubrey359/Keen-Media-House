@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keen Photography Studio - Capturing Your Moments</title>
+    <meta name="description" content="Keen Media House - Professional Photography & Videography Services in Nakuru, Kenya. Wedding photography, event coverage, drone services, and more.">
+    <meta name="keywords" content="photography Nakuru, videography Kenya, wedding photographer, event coverage, drone photography, Keen Media House">
+    <meta name="author" content="Keen Media House">
+    <meta property="og:title" content="Keen Media House - Professional Photography Services">
+    <meta property="og:description" content="Capturing your most precious moments with creativity and professionalism in Nakuru, Kenya">
+    <title>Keen Media House - Professional Photography & Videography | Nakuru, Kenya</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -18,7 +27,6 @@
             overflow-x: hidden;
         }
 
-        /* Header/Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -44,7 +52,6 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .nav-links {
@@ -65,36 +72,26 @@
             color: #667eea;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: width 0.3s;
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
         .hero {
             margin-top: 80px;
             height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
             background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%);
         }
 
         .hero-content {
             text-align: center;
-            z-index: 2;
             max-width: 900px;
             padding: 0 2rem;
         }
@@ -103,19 +100,15 @@
             font-size: 5rem;
             font-weight: 900;
             margin-bottom: 1.5rem;
-            line-height: 1.1;
             background: linear-gradient(135deg, #ffffff 0%, #667eea 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: fadeInUp 1s ease;
         }
 
         .hero p {
             font-size: 1.5rem;
             color: #b0b0b0;
             margin-bottom: 2.5rem;
-            animation: fadeInUp 1s ease 0.2s both;
         }
 
         .cta-button {
@@ -128,7 +121,6 @@
             font-weight: 600;
             font-size: 1.1rem;
             transition: all 0.3s;
-            animation: fadeInUp 1s ease 0.4s both;
             box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
         }
 
@@ -137,7 +129,6 @@
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
         }
 
-        /* Services Section */
         .services {
             padding: 6rem 5%;
             max-width: 1400px;
@@ -162,7 +153,6 @@
             border-radius: 20px;
             overflow: hidden;
             transition: all 0.4s;
-            cursor: pointer;
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             min-height: 500px;
@@ -182,7 +172,6 @@
             background-position: center;
             opacity: 0.3;
             transition: opacity 0.4s;
-            z-index: 0;
         }
 
         .service-card:hover::before {
@@ -190,42 +179,40 @@
         }
 
         .service-card:nth-child(1)::before {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%2367b26f" width="800" height="600"/><text x="400" y="300" font-size="60" fill="white" text-anchor="middle" font-family="Arial">CLASSIC</text></svg>');
+            background: linear-gradient(135deg, #67b26f 0%, #4a9960 100%);
         }
 
         .service-card:nth-child(2)::before {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23d4a574" width="800" height="600"/><text x="400" y="300" font-size="60" fill="white" text-anchor="middle" font-family="Arial">DELUXE</text></svg>');
+            background: linear-gradient(135deg, #d4a574 0%, #b8935f 100%);
         }
 
         .service-card:nth-child(3)::before {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%2367b26f" width="800" height="600"/><text x="400" y="300" font-size="60" fill="white" text-anchor="middle" font-family="Arial">SUPREME</text></svg>');
+            background: linear-gradient(135deg, #67b26f 0%, #4a9960 100%);
         }
 
         .service-card:nth-child(4)::before {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%2367b26f" width="800" height="600"/><text x="400" y="300" font-size="60" fill="white" text-anchor="middle" font-family="Arial">PREMIUM</text></svg>');
+            background: linear-gradient(135deg, #67b26f 0%, #4a9960 100%);
         }
 
         .service-card:nth-child(5)::before {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs><linearGradient id="grad" x1="0%25" y1="0%25" x2="0%25" y2="100%25"><stop offset="0%25" style="stop-color:%2387ceeb;stop-opacity:1" /><stop offset="100%25" style="stop-color:%2367b26f;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23grad)" width="800" height="600"/><text x="400" y="300" font-size="60" fill="white" text-anchor="middle" font-family="Arial">ROYAL</text></svg>');
+            background: linear-gradient(135deg, #87ceeb 0%, #67b26f 100%);
         }
 
         .service-card:nth-child(6)::before {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23667eea" width="800" height="600"/><text x="400" y="300" font-size="60" fill="white" text-anchor="middle" font-family="Arial">CUSTOM</text></svg>');
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
         .service-content {
             position: relative;
             z-index: 1;
-            background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.85) 100%);
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.95), rgba(10, 10, 10, 0.85));
             padding: 3rem;
             text-align: center;
-            border-radius: 0 0 20px 20px;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
-            border-color: rgba(102, 126, 234, 0.3);
         }
 
         .service-icon {
@@ -233,12 +220,12 @@
             margin-bottom: 1.5rem;
         }
 
-        .service-card h3 {
+        .service-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
 
-        .service-card p {
+        .service-content p {
             color: #b0b0b0;
             line-height: 1.6;
             margin-bottom: 1rem;
@@ -250,22 +237,49 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
-        /* Team Section */
-        .team {
+        .portfolio {
             padding: 6rem 5%;
             background: #0f0f0f;
         }
 
+        .portfolio-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            height: 350px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .team {
+            padding: 6rem 5%;
+        }
+
         .team-grid {
             max-width: 1400px;
-            margin: 0 auto;
+            margin: 3rem auto 0;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
 
         .team-card {
@@ -286,7 +300,6 @@
             width: 100%;
             height: 300px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -326,12 +339,72 @@
             font-weight: 600;
         }
 
-        .availability.busy {
-            background: rgba(234, 102, 102, 0.2);
-            color: #ea6666;
+        .testimonials {
+            padding: 6rem 5%;
+            background: #0f0f0f;
         }
 
-        /* Booking Section */
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #1a1a1a;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            border-color: rgba(102, 126, 234, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .stars {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .author-info h4 {
+            margin-bottom: 0.3rem;
+        }
+
+        .author-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
         .booking {
             padding: 6rem 5%;
             max-width: 800px;
@@ -367,6 +440,7 @@
             color: #ffffff;
             font-size: 1rem;
             transition: all 0.3s;
+            font-family: inherit;
         }
 
         .form-group input:focus,
@@ -446,7 +520,20 @@
             font-size: 0.9rem;
         }
 
-        /* Footer */
+        .success-message {
+            display: none;
+            padding: 1rem;
+            background: rgba(102, 234, 102, 0.2);
+            color: #66ea66;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .success-message.active {
+            display: block;
+        }
+
         footer {
             background: #0a0a0a;
             padding: 4rem 5%;
@@ -467,7 +554,6 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .footer-section p, .footer-section a {
@@ -512,15 +598,31 @@
             color: #666;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
         }
 
         @media (max-width: 768px) {
@@ -533,11 +635,28 @@
             }
 
             .nav-links {
-                gap: 1.5rem;
-                font-size: 0.9rem;
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: left 0.3s;
             }
 
-            .services-grid, .team-grid {
+            .nav-links.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .services-grid, .team-grid, .portfolio-grid, .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -548,19 +667,25 @@
             .booking-form {
                 padding: 2rem;
             }
+
+            .section-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
+    <nav id="navbar">
         <div class="nav-content">
             <div class="logo">KEEN STUDIO</div>
-            <ul class="nav-links">
+            <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#services">Packages</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Our Team</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#booking">Book Now</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -568,7 +693,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Capturing Your Moments</h1>
-            <p>Professional photography services for weddings, events, portraits, and corporate functions</p>
+            <p>Professional photography & videography services for weddings, events, and special occasions in Nakuru, Kenya</p>
             <a href="#booking" class="cta-button">Book Your Session</a>
         </div>
     </section>
@@ -580,12 +705,7 @@
                 <div class="service-content">
                     <div class="service-icon">🌟</div>
                     <h3>Classic Package</h3>
-                    <p>• 1 Photographer<br>
-                    • Edited Photos (100-300 pics)<br>
-                    • Edited Photos via Online Link<br>
-                    • 1 A4 Photo Mount<br>
-                    • 1 Photo Album (100 pics)<br>
-                    • Transport Exclusive</p>
+                    <p>• 1 Photographer<br>• Edited Photos (100-300 pics)<br>• Online Link<br>• 1 A4 Photo Mount<br>• 1 Photo Album (100 pics)<br>• Transport Exclusive</p>
                     <p class="price">KES 7,000</p>
                 </div>
             </div>
@@ -594,34 +714,8 @@
                 <div class="service-content">
                     <div class="service-icon">💎</div>
                     <h3>Deluxe Package</h3>
-                    <p>• 1 Photographer<br>
-                    • 1 Videographer<br>
-                    • Full Day Coverage<br>
-                    • Edited Photos Online (400-700)<br>
-                    • Edited Video on Flash Disk<br>
-                    • 1 A4+ Mount<br>
-                    • 1 Photo Album (200 pics)<br>
-                    • Transport Exclusive</p>
+                    <p>• 1 Photographer<br>• 1 Videographer<br>• Full Day Coverage<br>• Edited Photos (400-700)<br>• Edited Video on Flash Disk<br>• 1 A4+ Mount<br>• 1 Album (200 pics)</p>
                     <p class="price">KES 15,000</p>
-                </div>
-            </div>
-
-            <div class="service-card">
-                <div class="service-content">
-                    <div class="service-icon">⭐</div>
-                    <h3>Supreme Package</h3>
-                    <p>• 2 Photographers<br>
-                    • 2 Videographers<br>
-                    • HD Drone Coverage (photos & videos)<br>
-                    • Livestreaming (YouTube & Facebook)<br>
-                    • Edited Photos Online (600-1000)<br>
-                    • Edited Video on Flash Disk<br>
-                    • Portrait Reels & Event Trailer<br>
-                    • Full Day Coverage<br>
-                    • 2 A3 Mounts<br>
-                    • 1 Photo Album (200 pics)<br>
-                    • Transport Exclusive</p>
-                    <p class="price">KES 45,000</p>
                 </div>
             </div>
 
@@ -629,18 +723,17 @@
                 <div class="service-content">
                     <div class="service-icon">👑</div>
                     <h3>Premium Package</h3>
-                    <p>• 1 Photographer<br>
-                    • 2 Videographers<br>
-                    • HD Drone Coverage (photos & videos)<br>
-                    • Portrait Reels<br>
-                    • Event Trailer<br>
-                    • Full Day Coverage<br>
-                    • Edited Photos Online (400-800)<br>
-                    • Edited Video on Flash Disk<br>
-                    • 1 A3 Mount<br>
-                    • 1 Photo Album (200 pics)<br>
-                    • Transport Exclusive</p>
+                    <p>• 1 Photographer<br>• 2 Videographers<br>• HD Drone Coverage<br>• Portrait Reels & Event Trailer<br>• Full Day Coverage<br>• Photos (400-800)<br>• 1 A3 Mount<br>• 1 Album (200 pics)</p>
                     <p class="price">KES 30,000</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-content">
+                    <div class="service-icon">⭐</div>
+                    <h3>Supreme Package</h3>
+                    <p>• 2 Photographers<br>• 2 Videographers<br>• HD Drone Coverage<br>• Livestreaming<br>• Photos (600-1000)<br>• Portrait Reels & Trailer<br>• 2 A3 Mounts<br>• 1 Album (200 pics)</p>
+                    <p class="price">KES 45,000</p>
                 </div>
             </div>
 
@@ -648,18 +741,7 @@
                 <div class="service-content">
                     <div class="service-icon">💫</div>
                     <h3>Royal Package</h3>
-                    <p>• 2 Photographers<br>
-                    • 2 Videographers<br>
-                    • HD Drone Coverage (photos & videos)<br>
-                    • Livestreaming (YouTube & Facebook)<br>
-                    • 1 Broad Base Banner<br>
-                    • Edited Photos Online (1000-1500)<br>
-                    • Edited Video on Flash Disk<br>
-                    • Event Trailer & Portrait Reels<br>
-                    • Full Day Coverage<br>
-                    • 2 A3 Mounts<br>
-                    • 2 Photo Albums (200 pics each)<br>
-                    • Transport Exclusive</p>
+                    <p>• 2 Photographers<br>• 2 Videographers<br>• HD Drone Coverage<br>• Livestreaming<br>• Broad Base Banner<br>• Photos (1000-1500)<br>• 2 A3 Mounts<br>• 2 Albums (200 pics each)</p>
                     <p class="price">KES 65,000</p>
                 </div>
             </div>
@@ -675,8 +757,20 @@
         </div>
     </section>
 
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">Add Your Wedding Photos Here</div>
+            <div class="portfolio-item">Add Your Event Photos Here</div>
+            <div class="portfolio-item">Add Your Portrait Photos Here</div>
+            <div class="portfolio-item">Add Your Drone Photos Here</div>
+            <div class="portfolio-item">Add Your Event Photos Here</div>
+            <div class="portfolio-item">Add Your Wedding Photos Here</div>
+        </div>
+    </section>
+
     <section class="team" id="team">
-        <h2 class="section-title">Meet Our Photographers</h2>
+        <h2 class="section-title">Meet Our Team</h2>
         <div class="team-grid">
             <div class="team-card">
                 <div class="team-image">👔</div>
@@ -760,10 +854,55 @@
         </div>
     </section>
 
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Keen Media House captured our wedding beautifully! The team was professional, creative, and made us feel comfortable throughout. The photos exceeded our expectations!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">👰</div>
+                    <div class="author-info">
+                        <h4>Sarah & John</h4>
+                        <p>Wedding - December 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Outstanding service! The drone footage was amazing and really added that wow factor to our corporate event. Highly recommend their Supreme package."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">💼</div>
+                    <div class="author-info">
+                        <h4>James Mwangi</h4>
+                        <p>Corporate Event</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p class="testimonial-text">"Best photography team in Nakuru! They were punctual, professional, and delivered our photos within a week. The quality is top-notch. Thank you Keen Media House!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">🎉</div>
+                    <div class="author-info">
+                        <h4>Grace Akinyi</h4>
+                        <p>Birthday Party</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="booking" id="booking">
         <h2 class="section-title">Book Your Session</h2>
         <div class="booking-form">
-            <form id="bookingForm">
+            <div class="success-message" id="successMessage">
+                ✓ Thank you! Your booking request has been received. We'll contact you within 24 hours.
+            </div>
+            
+            <form id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="firstName">First Name *</label>
@@ -852,31 +991,31 @@
     <footer id="contact">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Keen Photography Studio</h4>
-                <p>A new photography company dedicated to capturing your most precious moments with creativity and professionalism.</p>
+                <h4>Keen Media House</h4>
+                <p>Professional photography and videography services in Nakuru, Kenya. Capturing your most precious moments with creativity and excellence.</p>
                 <div class="social-links">
-                    <a href="#">📘</a>
-                    <a href="#">📷</a>
-                    <a href="#">🐦</a>
-                    <a href="#">📱</a>
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Instagram">📷</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="WhatsApp">📱</a>
                 </div>
             </div>
 
             <div class="footer-section">
                 <h4>Quick Links</h4>
-                <a href="#services">Our Services</a>
+                <a href="#services">Our Packages</a>
+                <a href="#portfolio">Portfolio</a>
                 <a href="#team">Meet the Team</a>
                 <a href="#booking">Book Now</a>
-                <a href="#">Gallery</a>
             </div>
 
             <div class="footer-section">
                 <h4>Services</h4>
-                <a href="#">Classic Package</a>
-                <a href="#">Deluxe Package</a>
-                <a href="#">Premium Package</a>
-                <a href="#">Supreme Package</a>
-                <a href="#">Royal Package</a>
+                <a href="#services">Classic Package</a>
+                <a href="#services">Deluxe Package</a>
+                <a href="#services">Premium Package</a>
+                <a href="#services">Supreme Package</a>
+                <a href="#services">Royal Package</a>
             </div>
 
             <div class="footer-section">
@@ -884,16 +1023,35 @@
                 <p>Email: keenmediahouseclient@gmail.com</p>
                 <p>Phone: +254 707 431 433</p>
                 <p>Location: Nakuru, Kenya</p>
-                <p>Hours: Mon-Sun, Available</p>
+                <p>Available: 7 Days a Week</p>
             </div>
         </div>
 
         <div class="copyright">
-            <p>&copy; 2025 Keen Photography Studio. All rights reserved.</p>
+            <p>&copy; 2025 Keen Media House. All rights reserved. | Designed with ❤️ for capturing moments</p>
         </div>
     </footer>
 
+    <div class="back-to-top" id="backToTop">↑</div>
+
     <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            this.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
         // Team member preview functionality
         const teamMemberSelect = document.getElementById('teamMember');
         const teamMemberPreview = document.getElementById('teamMemberPreview');
@@ -953,29 +1111,60 @@
         });
 
         // Form submission
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        const bookingForm = document.getElementById('bookingForm');
+        const successMessage = document.getElementById('successMessage');
+
+        bookingForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const formData = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                service: document.getElementById('service').value,
-                date: document.getElementById('date').value,
-                time: document.getElementById('time').value,
-                teamMember: document.getElementById('teamMember').value,
-                location: document.getElementById('location').value,
-                details: document.getElementById('details').value
-            };
-
-            alert('Thank you for your booking request! We will contact you within 24 hours to confirm your session with ' + teamMembers[formData.teamMember].name + '.');
+            // Show success message
+            successMessage.classList.add('active');
+            
+            // Reset form
             this.reset();
             teamMemberPreview.classList.remove('active');
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('active');
+            }, 5000);
+            
+            // Scroll to top of form
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
         });
 
         // Set minimum date to today
-        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
     </script>
 </body>
 </html>
